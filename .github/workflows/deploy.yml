@@ -29,15 +29,15 @@ jobs:
         run: node index.js &
         env:
           PORT: ${{ secrets.PORT }}
-          
+
       - name: Deploy to VPS via SSH
         uses: appleboy/ssh-action@v1.0.0    
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.SSH_Key }} 
+          key: ${{ secrets.SSH_KEY }} 
           script: |
             cd /home/ec2-user/Learning_GithubAction
             git pull 
             docker compose up -d --build
-            echo "Deploying application..."
+           
