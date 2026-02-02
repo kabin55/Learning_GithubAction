@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "node index.js",
-    "test" : "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/kabin55/Learning_GithubAction#readme",
   "dependencies": {
+    "dotenv": "^17.2.3",
     "express": "^5.2.1"
   }
 }
