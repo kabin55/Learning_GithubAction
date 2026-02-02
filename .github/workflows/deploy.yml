@@ -39,5 +39,5 @@ jobs:
           script: |
             cd /home/ec2-user/Learning_GithubAction
             git pull 
-            docker-compose up -d --build
+            docker compose up -d --build
            
