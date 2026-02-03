@@ -35,3 +35,4 @@ jobs:
         run: |
           curl -X POST http://54.159.12.146:8080/job/deploy/build \
           --user username:${{ secrets.JENKINS_API_TOKEN }}
+          echo "Triggered Jenkins job for deployment."
