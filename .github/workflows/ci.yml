@@ -30,6 +30,7 @@ jobs:
           tags: |
             kabin55/myapp:${{ github.sha }}
             kabin55/myapp:latest
+            
       - name: Trigger Jenkins
         run: |
           curl -X POST http://54.159.12.146:8080/job/deploy/build \
