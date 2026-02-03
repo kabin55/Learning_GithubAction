@@ -31,10 +31,10 @@ jobs:
             kabin55/myapp:${{ github.sha }}
             kabin55/myapp:latest
 
-      - name: Trigger Jenkins
+      - name: Trigger Jenkins Deployment
         run: |
           curl -X POST \
-            -u "${{ secrets.JENKINS_USER }}:${{ secrets.JENKINS_API_TOKEN }}" \
-            http://54.159.12.146:8080/job/deploy/build
+          ${{ secrets.JENKINS_URL }}/job/deploy-myapp/build \
+          --user ${{ secrets.JENKINS_USER }}:${{ secrets.JENKINS_API_TOKEN }}
           echo "Triggered Jenkins job for deployment."
 
